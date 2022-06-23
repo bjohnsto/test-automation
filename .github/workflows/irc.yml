@@ -1,0 +1,20 @@
+# This is the workflow to have github talk to our IRC channels
+
+name: IRC
+
+on: [issues]
+
+jobs:
+  notification:
+    runs-on: ubuntu-latest
+    name: Notifications
+    steps:
+    - name: IRC notification
+      uses: Gottox/irc-message-action@v2
+      with:
+        server: 'irc2-devel.redhat.com'
+        port: 6667
+        channel: '##vdo-builds'
+        nickname: bjohnston
+        message: |-
+          ${{ github.actor }} created an issue on github. This is a test.
