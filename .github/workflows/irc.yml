@@ -3,6 +3,7 @@
 name: IRC
 
 on: [issues]
+  types: [opened]
 
 jobs:
   notification:
