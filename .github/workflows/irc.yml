@@ -1,0 +1,2 @@
+- name: IRC Message Action
+  uses: Gottox/irc-message-action@v2.1.2
