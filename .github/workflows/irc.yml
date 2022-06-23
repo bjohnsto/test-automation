@@ -2,8 +2,9 @@
 
 name: IRC
 
-on: [issues]
-  types: [opened]
+on: 
+  issues:
+    types: [opened]
 
 jobs:
   notification:
