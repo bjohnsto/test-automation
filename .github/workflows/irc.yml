@@ -1,4 +1,6 @@
-on: [push]
+Name: IRC
+
+on: [issues]
 
 jobs:
   notification:
@@ -8,7 +10,8 @@ jobs:
     - name: IRC notification
       uses: Gottox/irc-message-action@v2
       with:
-        channel: '##mychannel'
-        nickname: mynickname
+        channel: '#vdo-builds'
+        server: irc-2.devel.redhat.com
+        nickname: bjohnston
         message: |-
-          ${{ github.actor }} pushed ${{ github.event.ref }} ${{ github.event.compare }}
+          ${{ github.actor }} created an issue on github.
