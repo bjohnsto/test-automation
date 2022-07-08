@@ -23,5 +23,6 @@ jobs:
         port: 6667
         channel: '##vdo-builds'
         nickname: bjohnston
+        debug: true
         message: |-
           ${{ github.actor }} created an issue on github. This is a test.
