@@ -21,7 +21,7 @@ jobs:
       with:
         server: 'irc-2.devel.redhat.com'
         port: 6667
-        channel: '##vdo-builds'
+        channel: '#vdo-builds'
         nickname: bjohnston-bot
         tls: false
         message: |-
