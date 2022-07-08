@@ -15,5 +15,5 @@ jobs:
   notification:
     runs-on: self-hosted
     name: Notifications
-        run: |
-          brucebot-message -msg "${{ github.actor }} created an issue on github. This is a test."
+    run: |
+      brucebot-message -msg "${{ github.actor }} created an issue on github. This is a test."
