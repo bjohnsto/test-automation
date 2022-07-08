@@ -15,14 +15,5 @@ jobs:
   notification:
     runs-on: self-hosted
     name: Notifications
-    steps:
-    - name: IRC Message Action
-      uses: Gottox/irc-message-action@v2.1.2
-      with:
-        server: 'irc-2.devel.redhat.com'
-        port: 6667
-        channel: '#vdo-builds'
-        nickname: bjohnston-bot
-        tls: false
-        message: |-
-          ${{ github.actor }} created an issue on github. This is a test.
+        run: |
+          brucebot-message -msg "${{ github.actor }} created an issue on github. This is a test."
