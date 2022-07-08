@@ -22,7 +22,7 @@ jobs:
         server: 'irc-2.devel.redhat.com'
         port: 6667
         channel: '##vdo-builds'
-        nickname: bjohnston
+        nickname: bjohnston-bot
         tls: false
         message: |-
           ${{ github.actor }} created an issue on github. This is a test.
