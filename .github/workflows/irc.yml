@@ -17,4 +17,6 @@ jobs:
     steps:    
       - name: Notifications
         run: |
-          brucebot-message -msg "${{ github.actor }} created an issue on github. This is a test."
+          cd ~/limnoria/runbot
+          brucebot-cmd.py -message "${{ github.actor }} created an issue on github. This is a test."        
+          
