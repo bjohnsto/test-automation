@@ -18,4 +18,5 @@ jobs:
       - name: Notifications
         run: |
           cd ~/limnoria/runbot
-          response = curl https://api.github.com/users/bjohnsto
+          echo ${{github.event_path}}
+          
