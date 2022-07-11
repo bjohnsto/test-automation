@@ -18,5 +18,4 @@ jobs:
       - name: Notifications
         run: |
           cd ~/limnoria/runbot
-          cat ${{github.event_path}}
-          
+          curl -X POST https://localhost:8080/GitHub/ -H 'Content-Type: application/json' -H 'X-GitHub-Event: Issues -d @${{github.event_path}}
