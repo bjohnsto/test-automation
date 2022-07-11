@@ -18,5 +18,4 @@ jobs:
       - name: Notifications
         run: |
           cd ~/limnoria/runbot
-          ./brucebot-cmd.py -message "${{ github.actor }} created an issue on github. This is a test."        
-          
+          response = curl https://api.github.com/users/bjohnsto
