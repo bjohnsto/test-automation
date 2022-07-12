@@ -4,7 +4,7 @@ name: IRC
 
 on: 
   issues:
-    types: [opened]
+    types: [opened, closed]
     branches: [ main ]
 
 permissions:
