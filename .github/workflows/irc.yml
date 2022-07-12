@@ -18,4 +18,4 @@ jobs:
       - name: Notifications
         run: |
           cd ~/limnoria/runbot
-          curl --verbose -X POST https://localhost:8080/GitHub/ -H 'Content-Type: application/json' -H 'X-GitHub-Event: Issues' -d @${{github.event_path}}
+          curl --verbose POST http://localhost:8080/GitHub/ -H 'Content-Type: application/json' -H 'X-GitHub-Event: Issues' -d @${{github.event_path}}
