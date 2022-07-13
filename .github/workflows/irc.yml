@@ -6,10 +6,14 @@ on:
   issues:
     types: [opened, closed]
     branches: [ main ]
-
+  pull_request:
+    types: [opened, ready_for_review]
+    branches: [ main ]
+    
 permissions:
   contents: read
   issues: read
+  pull_request: read
 
 jobs:
   notification:
@@ -18,4 +22,4 @@ jobs:
       - name: Notifications
         run: |
           cd ~/limnoria/runbot
-          curl --verbose -X POST http://localhost:8080/github -H 'Content-Type: application/json' -H 'X-GitHub-Event: Issues' -d @${{github.event_path}}
+          curl --verbose -X POST http://localhost:8080/github -H 'Content-Type: application/json' -H 'X-GitHub-Event: ${{github.event_name}}' -d @${{github.event_path}}
