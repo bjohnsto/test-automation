@@ -21,5 +21,5 @@ jobs:
       - name: Notifications
         run: |
           cd ~/limnoria/runbot
-          echo ${{github.event_name}}
-          # curl --verbose -X POST http://localhost:8080/github -H 'Content-Type: application/json' -H 'X-GitHub-Event: ${{github.event_name}}' -d @${{github.event_path}}
+          echo "Sending ${{github.event_name}} event to webserver notifier"
+          curl --verbose -X POST http://localhost:8080/github -H 'Content-Type: application/json' -H 'X-GitHub-Event: ${{github.event_name}}' -d @${{github.event_path}}
