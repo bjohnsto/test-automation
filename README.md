@@ -5,4 +5,4 @@ Testing bot / actions / apps functionality
 This is some arbitrary text.
 
 # More arbitrary text added
-Here is some more text. TESTING.
+Here is some more arbitrary text.
